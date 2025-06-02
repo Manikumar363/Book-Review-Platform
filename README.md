@@ -1,150 +1,70 @@
-# Book Review Platform
+# Getting Started with Create React App
 
-A full-stack web application for book enthusiasts to discover, review, and discuss books. Built with the MERN stack (MongoDB, Express.js, React.js, Node.js).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Features
+## Available Scripts
 
-- User authentication (signup, login, logout)
-- Browse and search books
-- Create, read, update, and delete book reviews
-- User profiles with review history
-- Featured books section
-- Latest reviews feed
-- Responsive design for all devices
+In the project directory, you can run:
 
-## Tech Stack
+### `npm start`
 
-### Frontend
-- React.js
-- Redux Toolkit for state management
-- Material-UI (MUI) for UI components
-- React Router for navigation
-- Axios for API requests
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### Backend
-- Node.js
-- Express.js
-- MongoDB with Mongoose
-- JWT for authentication
-- bcrypt for password hashing
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-## Prerequisites
+### `npm test`
 
-Before running this project, make sure you have the following installed:
-- Node.js (v14 or higher)
-- MongoDB
-- npm or yarn
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## Installation
+### `npm run build`
 
-1. Clone the repository:
-```bash
-git clone <repository-url>
-cd book-review-platform
-```
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-2. Install backend dependencies:
-```bash
-cd backend
-npm install
-```
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-3. Install frontend dependencies:
-```bash
-cd ../frontend
-npm install
-```
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## Configuration
+### `npm run eject`
 
-1. Create a `.env` file in the backend directory with the following variables:
-```
-PORT=5000
-MONGODB_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
-```
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-2. Create a `.env` file in the frontend directory:
-```
-REACT_APP_API_URL=http://localhost:5000/api
-```
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-## Running the Application
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-1. Start the backend server:
-```bash
-cd backend
-npm start
-```
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-2. Start the frontend development server:
-```bash
-cd frontend
-npm start
-```
+## Learn More
 
-The application should now be running at:
-- Frontend: http://localhost:3000
-- Backend: http://localhost:5000
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-## Project Structure
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-```
-book-review-platform/
-├── backend/
-│   ├── controllers/
-│   ├── models/
-│   ├── routes/
-│   ├── middleware/
-│   ├── server.js
-│   └── package.json
-├── frontend/
-│   ├── public/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── store/
-│   │   ├── assets/
-│   │   └── App.js
-│   └── package.json
-└── README.md
-```
+### Code Splitting
 
-## API Endpoints
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Authentication
-- POST /api/auth/register - Register a new user
-- POST /api/auth/login - Login user
-- GET /api/auth/me - Get current user
+### Analyzing the Bundle Size
 
-### Books
-- GET /api/books - Get all books
-- GET /api/books/:id - Get book by ID
-- POST /api/books - Create new book
-- PUT /api/books/:id - Update book
-- DELETE /api/books/:id - Delete book
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Reviews
-- GET /api/reviews - Get all reviews
-- GET /api/reviews/:id - Get review by ID
-- POST /api/reviews - Create new review
-- PUT /api/reviews/:id - Update review
-- DELETE /api/reviews/:id - Delete review
+### Making a Progressive Web App
 
-## Contributing
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+### Advanced Configuration
 
-## License
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+### Deployment
 
-## Contact
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-allemanikumar363@gmail.com
+### `npm run build` fails to minify
 
-Project Link: https://github.com/Manikumar363/Book-Review-Platform/tree/main
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
