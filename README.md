@@ -1,6 +1,7 @@
 # Book Review Platform
 
 A full-stack web application for book enthusiasts to discover, review, and discuss books. Built with the MERN stack (MongoDB, Express.js, React.js, Node.js).
+
 ![Screenshot (458)](https://github.com/user-attachments/assets/644c60dd-c2b9-4185-b077-27202ed1b3df)
 
 ## Features
