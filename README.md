@@ -1,70 +1,149 @@
-# Getting Started with Create React App
+# Book Review Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack web application for book enthusiasts to discover, review, and discuss books. Built with the MERN stack (MongoDB, Express.js, React.js, Node.js).
+![Screenshot (458)](https://github.com/user-attachments/assets/644c60dd-c2b9-4185-b077-27202ed1b3df)
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+* User authentication (signup, login, logout)
+* Browse and search books
+* Create, read, update, and delete book reviews
+* User profiles with review history
+* Featured books section
+* Latest reviews feed
+* Responsive design for all devices
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Frontend
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* React.js
+* Redux Toolkit for state management
+* Material-UI (MUI) for UI components
+* React Router for navigation
+* Axios for API requests
 
-### `npm test`
+### Backend
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Node.js
+* Express.js
+* MongoDB with Mongoose
+* JWT for authentication
+* bcrypt for password hashing
 
-### `npm run build`
+## Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Before running this project, make sure you have the following installed:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Node.js (v14 or higher)
+* MongoDB
+* npm or yarn
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Installation
 
-### `npm run eject`
+1. Clone the repository:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+git clone https://github.com/Manikumar363/Book-Review-Platform.git
+cd Book-Review-Platform
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Install backend dependencies:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+cd backend
+npm install # or yarn install
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Install frontend dependencies:
 
-## Learn More
+```bash
+cd ../frontend
+npm install # or yarn install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Configuration
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Create a `.env` file in the **backend** directory with the following variables:
 
-### Code Splitting
+```env
+PORT=5000
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+```
+*   `your_mongodb_connection_string`: Replace with your MongoDB connection string (e.g., `mongodb://localhost:27017/bookreviewdb` or your MongoDB Atlas connection string).
+*   `your_jwt_secret`: Replace with a strong, random string for JWT signing.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. Create a `.env` file in the **frontend** directory:
 
-### Analyzing the Bundle Size
+```env
+REACT_APP_API_URL=http://localhost:5000/api
+```
+*   If your backend is running on a different URL/port, update `http://localhost:5000/api` accordingly.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Running the Application
 
-### Making a Progressive Web App
+1. Start the backend server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+cd backend
+npm start # or yarn start
+```
 
-### Advanced Configuration
+2. Start the frontend development server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+cd ../frontend
+npm start # or yarn start
+```
 
-### Deployment
+The application should now be running at:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+*   Frontend: `http://localhost:3000`
+*   Backend API: `http://localhost:5000/api`
 
-### `npm run build` fails to minify
+## API Endpoints
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Authentication
+
+*   `POST /api/auth/register` - Register a new user
+*   `POST /api/auth/login` - Login user
+*   `GET /api/auth/me` - Get current user (requires authentication)
+
+### Books
+
+*   `GET /api/books` - Get all books
+*   `GET /api/books/:id` - Get book by ID
+*   `POST /api/books` - Create new book (requires authentication)
+*   `PUT /api/books/:id` - Update book by ID (requires authentication)
+*   `DELETE /api/books/:id` - Delete book by ID (requires authentication)
+
+### Reviews
+
+*   `GET /api/reviews` - Get all reviews
+*   `GET /api/reviews/book/:bookId` - Get reviews for a specific book
+*   `GET /api/reviews/user/:userId` - Get reviews by a specific user
+*   `GET /api/reviews/:id` - Get review by ID
+*   `POST /api/reviews` - Create new review (requires authentication)
+*   `PUT /api/reviews/:id` - Update review by ID (requires authentication)
+*   `DELETE /api/reviews/:id` - Delete review by ID (requires authentication)
+
+## Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository.
+2. Create your feature branch (`git checkout -b feature/your-feature-name`).
+3. Commit your changes (`git commit -m 'feat: Add your feature'`).
+4. Push to the branch (`git push origin feature/your-feature-name`).
+5. Open a Pull Request.
+
+Please ensure your code follows the project's coding standards and includes appropriate tests.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For questions or feedback, please contact [allemanikumar363@gmail.com](mailto:allemanikumar363@gmail.com).
